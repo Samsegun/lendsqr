@@ -1,0 +1,22 @@
+// variables
+@use "./styles/variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; // for rem calculations
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+}
+
+#root {
+    min-height: 100vh;
+}
