@@ -1,0 +1,134 @@
+@use "./variables" as *;
+
+.dashboard-container {
+    header {
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.75rem;
+        // padding: 0 1.875rem;
+
+        box-shadow: 3px 0px 20px 0px #0000000a;
+
+        .left {
+            display: flex;
+            align-items: center;
+            // background-color: purple;
+
+            .logo {
+                display: none;
+            }
+
+            .menu-btn {
+                align-self: flex-end;
+                padding: 0.5rem;
+
+                img {
+                    width: 1.75rem;
+                    height: 1.75rem;
+                }
+            }
+
+            .search {
+                margin-left: 0.2rem;
+                position: relative;
+                display: inline;
+
+                input {
+                    border: 1px solid #213f7d;
+                    color: $primary-gray;
+                    height: 40px;
+                    outline: none;
+                    border-radius: 8px;
+                    padding: 6px 12px;
+                    // padding: 12px 0 12px 20px;
+                }
+
+                button {
+                    position: absolute;
+                    right: -0.1rem;
+                    top: 0;
+                    height: 100%;
+                    background-color: $primary-teal;
+                    padding: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    outline: none;
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+            }
+
+            @media (min-width: $breakpoint-tablet) {
+                gap: 1rem;
+
+                .logo {
+                    display: flex;
+                }
+
+                .menu-btn {
+                    display: none;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            // background-color: blue;
+
+            .docs {
+                display: none;
+            }
+
+            .notification {
+                display: none;
+            }
+
+            section {
+                display: flex;
+                align-items: center;
+                // gap: 0.5rem;
+
+                .user-info {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.2rem;
+                }
+
+                .avatar {
+                    display: none;
+                }
+
+                .dots {
+                    width: 1.75rem;
+                    height: 1.75rem;
+                }
+            }
+
+            @media (min-width: $breakpoint-tablet) {
+                gap: 1.5rem;
+
+                .docs {
+                    display: flex;
+                    text-decoration: underline;
+                }
+
+                .notification {
+                    display: flex;
+                }
+
+                .avatar {
+                    display: flex;
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint-tablet) {
+            height: 80px;
+        }
+    }
+}

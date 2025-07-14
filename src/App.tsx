@@ -1,10 +1,10 @@
 import "./app.scss";
+import Dashboard from "./components/Dashboard";
 
 function App() {
     return (
         <div>
-            <h1>lendsqr</h1>
-            <h2>welcome</h2>
+            <Dashboard />
         </div>
     );
 }
